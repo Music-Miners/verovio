@@ -75849,6 +75849,8 @@ bool Tool_esac2hum::getNoteList(vector<string>& song, vector<NoteData>& songdata
 					 break;
 				case '\0':
 					phend = 1;
+					state = STATE_SLEND;
+					nextstate = STATE_SLSTART;
 					break;
 				default: nextstate = -1;
 			}
